@@ -1,4 +1,5 @@
 # gotestsshagent
+[![Go Report Card](https://goreportcard.com/badge/github.com/raravena80/gotestsshagent)](https://goreportcard.com/report/github.com/raravena80/gotestsshagent)
 
 ## Usage
 
