@@ -29,18 +29,18 @@ var (
 	socketFile string
 )
 
+// RootCmd Main root command
 var RootCmd = &cobra.Command{
 	Use:   "gotestsshagent",
 	Short: "A mini implementation of an SSH Agent for Tests in Go",
 	Long: `A mini implementation of an SSH Agent for Tests in Go
 `,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
 		agent.RunAgent(socketFile)
 	},
 }
 
+// Execute Entry point for the app
 func Execute() {
 	if err := RootCmd.Execute(); err != nil {
 		fmt.Println(err)
