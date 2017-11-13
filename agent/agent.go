@@ -11,6 +11,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+// Package agent Main package for ssh agent
 package agent
 
 import (
@@ -22,7 +24,8 @@ import (
 	"os/signal"
 )
 
-func SetupSshAgent(socketFile string) {
+// SetupSSHAgent Function that setups ssh agent
+func SetupSSHAgent(socketFile string) {
 	a := agent.NewKeyring()
 	fmt.Println("Starting SSH Agent on:", socketFile)
 	ln, err := net.Listen("unix", socketFile)
@@ -46,6 +49,7 @@ func SetupSshAgent(socketFile string) {
 	}
 }
 
+// RunAgent Main function that runs the ssh agent
 func RunAgent(socketFile string) {
 	// Clean up on Exit
 	c := make(chan os.Signal, 1)
@@ -57,5 +61,5 @@ func RunAgent(socketFile string) {
 			os.Exit(0)
 		}
 	}()
-	SetupSshAgent(socketFile)
+	SetupSSHAgent(socketFile)
 }
