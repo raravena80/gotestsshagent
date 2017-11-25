@@ -1,5 +1,5 @@
 # gotestsshagent
-[![Go Report Card](https://goreportcard.com/badge/github.com/raravena80/gotestsshagent)](https://goreportcard.com/report/github.com/raravena80/gotestsshagent)
+[![Go Report Card](https://goreportcard.com/badge/github.com/raravena80/gotestsshagent)](https://goreportcard.com/report/github.com/raravena80/gotestsshagent) [![Apache Licensed](https://img.shields.io/badge/license-Apache2.0-blue.svg)](https://raw.githubusercontent.com/raravena80/gotestsshagent/master/LICENSE)
 
 ## Usage
 
