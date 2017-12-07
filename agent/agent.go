@@ -42,7 +42,7 @@ func SetupSSHAgent(socketFile string) {
 		go func(c io.ReadWriter) {
 			err := agent.ServeAgent(a, c)
 			if err != nil {
-				panic(fmt.Sprintf("Couldn't serve ssh agent for tests %v", err))
+				fmt.Sprintf("Couldn't serve ssh agent for tests %v", err)
 			}
 
 		}(c)
